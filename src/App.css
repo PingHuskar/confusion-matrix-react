@@ -1,0 +1,146 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: sans-serif;
+}
+
+body {
+  background: #999;
+  overflow: hidden;
+}
+
+.App {
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  position: relative;
+}
+.App h1 {
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
+  text-transform: uppercase;
+  margin-bottom: 5vh;
+  font-size: 2em;
+  font-weight: bolder;
+  transition: 0.5s;
+  position: relative;
+}
+.App h1:hover {
+  font-size: 3em;
+}
+.App table {
+  text-align: center;
+  font-size: 36px;
+}
+.App table:hover {
+  color: white;
+}
+.App table:hover thead tr th {
+  border: none;
+  background: #333;
+}
+.App table:hover thead tr th:first-child {
+  background: transparent;
+  color: white;
+  border: none;
+}
+.App table:hover tbody tr td {
+  border: none;
+}
+.App table:hover tbody tr td:first-child {
+  background: #333;
+}
+.App table:hover tbody tr td.TPs {
+  background: lightgreen;
+}
+.App table:hover tbody tr td.TNs {
+  background: #ee82ee;
+}
+.App table:hover tbody tr td.FPs {
+  background: orange;
+}
+.App table:hover tbody tr td.FNs {
+  background: orangered;
+}
+.App table thead tr th {
+  border: 3px solid white;
+  width: 20vw;
+  height: 10vh;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
+}
+.App table thead tr th:first-child {
+  border: none;
+}
+.App table tbody tr td {
+  border: 3px solid white;
+  height: 10vh;
+}
+.App table tbody tr td:first-child {
+  font-weight: bold;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
+}
+.App table tbody tr td.TPs {
+  background: rgba(144, 238, 144, 0.8);
+}
+.App table tbody tr td.TNs {
+  background: rgba(238, 130, 238, 0.8);
+}
+.App table tbody tr td.FPs {
+  background: rgba(255, 165, 0, 0.8);
+}
+.App table tbody tr td.FNs {
+  background: rgba(255, 69, 0, 0.8);
+}
+.App .stats {
+  width: 100%;
+  margin-top: 20px;
+  display: flex;
+  flex-flow: column;
+  justify-content: flex-end;
+  font-size: 1rem;
+  cursor: none;
+}
+.App .stats:hover {
+  border: none;
+  font-weight: normal;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
+}
+.App .stats:hover p {
+  filter: blur(3px);
+}
+.App .stats p {
+  text-transform: capitalize;
+  text-align: center;
+  line-height: 5vh;
+  font-weight: bold;
+}
+.App .stats p:hover {
+  border: none;
+  filter: opacity(1) blur(0);
+}
+.App .stats p .TPs {
+  background: lightgreen;
+  padding-inline: 7px;
+}
+.App .stats p .TNs {
+  background: #ee82ee;
+  padding-inline: 7px;
+}
+.App .stats p .FPs {
+  background: orange;
+  padding-inline: 7px;
+}
+.App .stats p .FNs {
+  background: orangered;
+  padding-inline: 7px;
+}/*# sourceMappingURL=App.css.map */

@@ -1,0 +1,165 @@
+$tableBorderColor : white;
+$TPs : lightgreen;
+$TNs : #ee82ee;
+$FPs : orange;
+$FNs : orangered;
+$paddingInline : 7px;
+$tableHoverBackground : #333;
+$bgOpacity : 0.8;
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+body {
+    background: #999;
+    overflow: hidden;
+}
+.App {
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    position: relative;
+    h1 {
+        user-select: none;
+        text-transform: uppercase;
+        margin-bottom: 5vh;
+        font-size: 2em;
+        font-weight: bolder;
+        transition: .5s;
+        position: relative;
+        &:hover {
+            // text-decoration: underline dashed;
+            font-size: 3em;
+        }
+    }
+    table {
+        text-align: center;
+        font-size: 36px;
+        &:hover {
+            color: white;
+            thead {
+                tr {
+                    th {
+                        border: none;
+                        background: $tableHoverBackground;
+                        &:first-child {
+                            background: transparent;
+                            color: white;
+                            border: none;
+                        }
+                    }
+                }
+            }
+            tbody {
+                tr {
+                    td {
+                        border: none;
+                        &:first-child {
+                            background: $tableHoverBackground;
+                        }
+                        &.TPs {
+                            background: $TPs;
+                        }
+                        &.TNs {
+                            background: $TNs;
+                        }
+                        &.FPs {
+                            background: $FPs;
+                        }
+                        &.FNs {
+                            background: $FNs;
+                        }
+                    }
+                }
+            }
+        }
+        thead {
+            tr {
+                th {
+                    border: 3px solid $tableBorderColor;
+                    width: 20vw;
+                    height: 10vh;
+                    user-select: none;
+                    &:first-child {
+                        border: none;
+                    }
+                }
+            }
+        }
+        tbody {
+            tr {
+                td {
+                    border: 3px solid $tableBorderColor;
+                    height: 10vh;
+                    &:first-child {
+                        font-weight: bold;
+                        user-select: none;
+                    }
+                    &.TPs {
+                        background: rgba($TPs, $alpha: $bgOpacity) ;
+                    }
+                    &.TNs {
+                        background: rgba($TNs, $alpha: $bgOpacity);
+                    }
+                    &.FPs {
+                        background: rgba($FPs, $alpha: $bgOpacity);
+                    }
+                    &.FNs {
+                        background: rgba($FNs, $alpha: $bgOpacity);
+                    }
+                }
+            }
+        }
+    }
+    .stats {
+        width: 100%;
+        margin-top: 20px;
+        // border: 1px solid red;
+        display: flex;
+        flex-flow: column;
+        justify-content: flex-end;
+        font-size: 1rem;
+        cursor: none;
+        &:hover {
+            border: none;
+            // color: white;
+            font-weight: normal;
+            user-select: none;
+            p {
+                filter: blur(3px);
+            }
+        }
+        p {
+            // border: 1px solid blue;
+            text-transform: capitalize;
+            text-align: center;
+            line-height: 5vh;
+            font-weight: bold;
+            &:hover {
+                border: none;
+                filter: opacity(1) blur(0);
+                // background: black;
+            }
+            .TPs {
+                background: $TPs;
+                padding-inline: $paddingInline;
+            }
+            .TNs {
+                background: $TNs;
+                padding-inline: $paddingInline;
+            }
+            .FPs {
+                background: $FPs;
+                padding-inline: $paddingInline;
+            }
+            .FNs {
+                background: $FNs;
+                padding-inline: $paddingInline;
+            }
+        }
+    }
+}
